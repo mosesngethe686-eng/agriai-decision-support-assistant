@@ -51,6 +51,12 @@ def train_beans_model():
 
 st.title("🌱 AgriAI Decision Support Assistant")
 
+st.warning(
+    "Research limitation: This prototype uses national-level historical "
+    "agricultural data for Kenya (1962–2023). Its estimates are exploratory "
+    "national-level estimates, not farm-specific predictions or personalised "
+    "agricultural recommendations."
+)
 st.write(
     "An exploratory agricultural decision-support application "
     "for crop-yield estimation in Kenya."
