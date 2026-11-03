@@ -1,0 +1,20 @@
+Feature,Importance,Importance_std
+temperature_change,1.2494589743587834,0.9897092587010896
+Cropland nitrogen_Manure applied,0.36744102564101033,0.27469736766946634
+Cropland phosphorus_Manure applied,0.15219914529918033,0.1596694567640901
+Agricultural Use_Nutrient phosphate P2O5 (total),0.13552136752136146,0.2097893612245216
+Cropland potassium_Manure applied,0.11307521367522781,0.1744554087183723
+Use per area of cropland_Nutrient potash K2O (total),0.06552820512821521,0.043163138996690414
+Cropland phosphorus_Crop residue removal,0.011630769230766684,0.037050631171638385
+Cropland phosphorus_Mineral fertilizers,0.0,0.0
+Cropland nitrogen_Mineral fertilizers,0.0,0.0
+year,0.0,0.0
+Cropland potassium_Mineral fertilizers,0.0,0.0
+Agricultural Use_Nutrient potash K2O (total),0.0,0.0
+Cropland nitrogen_Crop residue removal,0.0,0.0
+Cropland nitrogen_Atmospheric deposition,0.0,0.0
+Agricultural Use_Nutrient nitrogen N (total),0.0,0.0
+Cropland potassium_Crop residue removal,-0.015812820512846316,0.04047285281020447
+Use per area of cropland_Nutrient nitrogen N (total),-0.0357529914529844,0.2208534679006478
+maize_yield_lag1,-0.6030111111113352,0.9504341613007584
+Use per area of cropland_Nutrient phosphate P2O5 (total),-0.7051743589744476,1.7040304754846036
