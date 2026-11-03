@@ -210,16 +210,67 @@ crop_files = {
     "Potatoes": "potatoes_permutation_importance.csv"
 }
 
-for crop, filename in crop_files.items():
-    st.subheader(crop)
+for crop_name, filename in crop_files.items():
+
+    st.subheader(crop_name)
 
     try:
         importance_data = pd.read_csv(filename)
-        st.dataframe(importance_data, use_container_width=True)
+
+        st.write("Feature importance results")
+
+        st.dataframe(
+            importance_data,
+            use_container_width=True
+        )
+
+        feature_col = next(
+            (col for col in importance_data.columns
+             if col.lower() == "feature"),
+            importance_data.columns[0]
+        )
+
+        numeric_cols = importance_data.select_dtypes(
+            include="number"
+        ).columns.tolist()
+
+        importance_col = next(
+            (col for col in numeric_cols
+             if "mean" in col.lower() or "importance" in col.lower()),
+            numeric_cols[0]
+        )
+
+        chart_data = importance_data[
+            [feature_col, importance_col]
+        ].copy()
+
+        chart_data = chart_data.dropna()
+
+        chart_data = chart_data.sort_values(
+            importance_col,
+            ascending=True
+        ).tail(10)
+
+        st.write("Top 10 influential model features")
+
+        st.bar_chart(
+            chart_data.set_index(feature_col),
+            horizontal=True
+        )
+
     except FileNotFoundError:
-        st.warning(f"The {crop.lower()} feature-importance file is not yet available.")
+        st.warning(
+            f"The {crop_name.lower()} feature-importance file "
+            "is not yet available."
+        )
+
+    except (IndexError, KeyError, ValueError) as error:
+        st.error(
+            f"Could not display the {crop_name} chart: {error}"
+        )
 
 st.caption(
     "Research limitation: Feature importance estimates are exploratory "
-    "because the models were evaluated using only 13 test observations."
+    "because the models were evaluated using only 13 test observations. "
+    "Feature importance does not establish causation."
 )
