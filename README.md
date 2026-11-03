@@ -4,6 +4,9 @@
 ![AgriAI Application Homepage](agriai_homepage.png)
 
 AgriAI is an exploratory agricultural decision-support application that investigates how historical agricultural data, machine learning and explainable AI can support crop-yield estimation and food-security research in Kenya.
+### Feature Importance Visualisations
+
+![AgriAI Explainable AI Results](agriai_explainability.png)
 
 The project builds on MSc Data Science research titled **"Crop Yield Prediction Using Machine Learning for Kenyan Farmers."**
 
