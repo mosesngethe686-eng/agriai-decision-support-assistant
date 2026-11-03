@@ -274,3 +274,58 @@ st.caption(
     "because the models were evaluated using only 13 test observations. "
     "Feature importance does not establish causation."
 )
+st.divider()
+
+st.header("🤖 Ask AgriAI")
+st.write(
+    "Explore questions about crop-yield prediction, "
+    "machine learning and climate-resilient agriculture. "
+    "Answers are based on the current research findings."
+)
+
+questions = {
+    "Why does previous-year yield matter for beans?":
+        "The bean model identified previous-year bean yield "
+        "as its most influential feature. This suggests that "
+        "historical yield contains useful information for "
+        "estimating subsequent yields. It does not prove causation.",
+
+    "Why is temperature change important for maize?":
+        "Temperature change was the leading feature in the "
+        "maize permutation-importance analysis. This indicates "
+        "that the tested model relied strongly on this variable. "
+        "Further research is needed to establish its agricultural effects.",
+
+    "Why does previous-year yield matter for potatoes?":
+        "The potato model relied strongly on previous-year yield. "
+        "The persistence baseline also performed better than the "
+        "tested machine-learning models in the initial evaluation.",
+
+    "What are the limitations of this research?":
+        "The dataset contains 62 annual observations covering "
+        "1962–2023. The test period contains only 13 observations. "
+        "The results are exploratory and require validation using "
+        "larger and geographically representative datasets.",
+
+    "How can this research support food security?":
+        "The research explores how historical agricultural data, "
+        "machine learning and climate variables can contribute "
+        "to crop-yield estimation. Further validation and integration "
+        "with more geographically detailed data are needed before "
+        "using the results for operational agricultural decisions."
+}
+
+selected_question = st.selectbox(
+    "Choose a question",
+    list(questions.keys())
+)
+
+if st.button("Get answer"):
+    st.markdown("### AgriAI's response")
+    st.write(questions[selected_question])
+
+st.caption(
+    "Research assistant prototype. Answers are predefined "
+    "and grounded in the current study; this version does not "
+    "yet use a live AI language model."
+)
