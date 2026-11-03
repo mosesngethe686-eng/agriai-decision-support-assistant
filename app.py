@@ -196,3 +196,30 @@ st.markdown(
     "[View the AgriAI GitHub repository](https://github.com/"
     "mosesngethe686-eng/agriai-decision-support-assistant)"
 )
+st.header("Explainable AI: Understanding the Predictions")
+
+st.write(
+    "Feature importance helps us understand which historical variables "
+    "influenced the machine-learning models. These relationships do not "
+    "establish cause and effect."
+)
+
+crop_files = {
+    "Beans": "beans_permutation_importance.csv",
+    "Maize": "maize_permutation_importance.csv",
+    "Potatoes": "potatoes_permutation_importance.csv"
+}
+
+for crop, filename in crop_files.items():
+    st.subheader(crop)
+
+    try:
+        importance_data = pd.read_csv(filename)
+        st.dataframe(importance_data, use_container_width=True)
+    except FileNotFoundError:
+        st.warning(f"The {crop.lower()} feature-importance file is not yet available.")
+
+st.caption(
+    "Research limitation: Feature importance estimates are exploratory "
+    "because the models were evaluated using only 13 test observations."
+)
