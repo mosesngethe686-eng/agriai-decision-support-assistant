@@ -329,3 +329,67 @@ st.caption(
     "and grounded in the current study; this version does not "
     "yet use a live AI language model."
 )
+st.divider()
+
+st.subheader("Ask your own question")
+
+user_question = st.text_input(
+    "What would you like to know about the research?",
+    placeholder="e.g. What makes temperature important for maize?"
+)
+
+if st.button("Submit question"):
+
+    question = user_question.lower()
+
+    if not question.strip():
+        st.warning("Please enter a question.")
+
+    elif "bean" in question:
+        st.write(
+            "The bean model identified previous-year bean yield "
+            "as its most influential feature. This suggests that "
+            "historical yield contains useful information for "
+            "estimating subsequent yields."
+        )
+
+    elif "maize" in question or "temperature" in question:
+        st.write(
+            "Temperature change was the leading feature in the "
+            "maize permutation-importance analysis. This indicates "
+            "that the tested model relied strongly on this variable. "
+            "It does not establish a causal relationship."
+        )
+
+    elif "potato" in question:
+        st.write(
+            "Previous-year potato yield was highly influential. "
+            "The previous-year baseline also outperformed the "
+            "tested machine-learning models in the initial evaluation."
+        )
+
+    elif "limitation" in question or "data" in question:
+        st.write(
+            "The research uses 62 annual observations from 1962–2023. "
+            "The test period contains only 13 observations. "
+            "Further validation using larger datasets is necessary."
+        )
+
+    elif "food security" in question or "climate" in question:
+        st.write(
+            "AgriAI explores how agricultural data, machine learning "
+            "and climate variables can support crop-yield estimation "
+            "and food-security research in Kenya."
+        )
+
+    else:
+        st.info(
+            "This question is not yet covered by the research "
+            "knowledge base. Try asking about beans, maize, potatoes, "
+            "temperature, data limitations or food security."
+        )
+
+st.caption(
+    "This is a prototype research assistant using predefined "
+    "topic-based responses. It does not yet use generative AI."
+)
