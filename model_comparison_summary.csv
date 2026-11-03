@@ -1,0 +1,10 @@
+Crop,Model,MAE,RMSE,R2
+Beans,Random Forest,54.271,65.946,0.086
+Beans,Gradient Boosting,51.646,71.323,-0.069
+Beans,Previous Year,66.038,84.744,-0.509
+Maize,Random Forest,130.656,171.279,-0.83
+Maize,Gradient Boosting,146.273,189.122,-1.231
+Maize,Historical Mean,135.02,164.49,-0.687
+Potatoes,Random Forest,6890.814,7555.625,-2.665
+Potatoes,Gradient Boosting,9689.16,10463.174,-6.028
+Potatoes,Previous Year,1833.162,2598.834,0.566
