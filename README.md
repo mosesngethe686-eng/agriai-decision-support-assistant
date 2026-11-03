@@ -1,6 +1,7 @@
 # 🌱 AgriAI Decision Support Assistant
 
 ### Explainable Machine Learning for Crop-Yield Estimation and Climate-Resilient Agriculture in Kenya
+![AgriAI Application Homepage](agriai_homepage.png)
 
 AgriAI is an exploratory agricultural decision-support application that investigates how historical agricultural data, machine learning and explainable AI can support crop-yield estimation and food-security research in Kenya.
 
