@@ -1,0 +1,20 @@
+Feature,Importance,Importance_std
+potato_yield_lag1,322.47684529914306,128.92726476892472
+Use per area of cropland_Nutrient phosphate P2O5 (total),0.5960196581210463,0.7516647140068475
+Cropland phosphorus_Crop residue removal,0.4772794871799912,0.26330425137163715
+Use per area of cropland_Nutrient nitrogen N (total),0.30141025641163044,0.2916450228846012
+Agricultural Use_Nutrient phosphate P2O5 (total),0.212044444444291,0.08317067384387546
+temperature_change,0.011837606839283884,1.1810809113466858
+year,0.0,0.0
+Cropland phosphorus_Mineral fertilizers,0.0,0.0
+Cropland nitrogen_Mineral fertilizers,0.0,0.0
+Cropland nitrogen_Atmospheric deposition,0.0,0.0
+Cropland potassium_Mineral fertilizers,0.0,0.0
+Cropland phosphorus_Manure applied,0.0,0.0
+Agricultural Use_Nutrient nitrogen N (total),0.0,0.0
+Cropland potassium_Crop residue removal,0.0,0.0
+Cropland nitrogen_Crop residue removal,0.0,0.0
+Agricultural Use_Nutrient potash K2O (total),0.0,0.0
+Use per area of cropland_Nutrient potash K2O (total),-0.25065897435803586,0.36485772453977394
+Cropland potassium_Manure applied,-0.49746923076830474,0.39559391863551413
+Cropland nitrogen_Manure applied,-1.6656692307686778,0.6433075926062329
